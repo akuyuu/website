@@ -1,0 +1,88 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	<style>
+		main {
+			width: 960px;
+		}
+
+		section {
+			display: block;
+		}
+
+		.post {
+			margin-bottom: 2rem;
+			//border-bottom: 1px solid #eee;
+			//padding-bottom: 1rem;
+		}
+
+		.title {
+			font-size: 1.8rem;
+			color: rgb(var(--black));
+			margin: 0;
+		}
+
+		.date {
+			color: rgb(var(--gray));
+			font-size: 0.9rem;
+			margin-top: 0.5rem;
+		}
+
+		.post a:hover .title {
+			color: rgb(var(--accent));
+		}
+
+		.post a {
+			text-decoration: none;
+			display: block;
+		}
+
+		@media (max-width: 720px) {
+			main {
+				width: 100%;
+				padding: 1rem;
+			}
+
+			.post {
+				margin-bottom: 1rem;
+			}
+
+			.title {
+				font-size: 1.5rem;
+			}
+		}
+	</style>
+</head>
+<body>
+<Header />
+<main>
+	<section>
+		{
+			posts.map((post) => (
+				<div class="post">
+					<a href={`/blog/${post.slug}/`}>
+						<h4 class="title">{post.data.title}</h4>
+						<p class="date">
+							<FormattedDate date={post.data.pubDate} />
+						</p>
+					</a>
+				</div>
+			))
+		}
+	</section>
+</main>
+</body>
+</html>

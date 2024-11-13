@@ -1,0 +1,76 @@
+---
+import { SITE_TITLE } from '../consts';
+---
+
+<header>
+	<nav>
+		<h2>
+			<a href="/">{SITE_TITLE}</a>
+		</h2>
+		<div class="internal-links">
+			<a href="/">Home</a>
+			<a href="/blog">Blog</a>
+			<a href="/about">About</a>
+		</div>
+		<div class="font-toggle">
+			<button id="font-toggle">Switch Font</button>
+		</div>
+	</nav>
+</header>
+
+<script type="module" client:load>
+	window.addEventListener('load', () => {
+		const storedFont = localStorage.getItem('font') || 'normal';
+
+		if (storedFont === 'pixel') {
+			document.body.classList.add('pixel-font');
+			document.body.classList.remove('normal-font');
+		} else {
+			document.body.classList.add('normal-font');
+			document.body.classList.remove('pixel-font');
+		}
+
+		const button = document.getElementById('font-toggle');
+		button?.addEventListener('click', () => {
+			const isPixel = document.body.classList.contains('pixel-font');
+
+			if (isPixel) {
+				document.body.classList.remove('pixel-font');
+				document.body.classList.add('normal-font');
+				localStorage.setItem('font', 'normal');
+			} else {
+				document.body.classList.remove('normal-font');
+				document.body.classList.add('pixel-font');
+				localStorage.setItem('font', 'pixel');
+			}
+
+			// might cause problems in the future teehee
+			document.body.offsetHeight;
+		});
+	});
+</script>
+
+<style>
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	nav a {
+		padding: 1em 0.5em;
+		text-decoration: none;
+	}
+
+	.font-toggle button {
+		background: none;
+		border: 2px solid var(--accent);
+		padding: 0.5em;
+		cursor: pointer;
+	}
+
+	.font-toggle button:hover {
+		background-color: var(--accent);
+		color: white;
+	}
+</style>

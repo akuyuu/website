@@ -1,0 +1,209 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+
+:root {
+	--accent: #2337ff;
+	--accent-dark: #000d8a;
+	--black: 15, 18, 25;
+	--gray: 96, 115, 159;
+	--gray-light: 229, 233, 240;
+	--gray-dark: 34, 41, 57;
+	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
+	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
+		0 16px 32px rgba(var(--gray), 33%);
+}
+@font-face {
+	font-family: 'zpix';
+	src: url('/fonts/zpix.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	src: url('/fonts/JBMono-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body.normal-font {
+	font-family: 'JetBrains Mono', monospace !important;
+}
+
+body.pixel-font {
+	font-family: 'zpix', monospace !important;
+}
+
+button {
+	font-family: inherit;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav a {
+	padding: 1em 0.5em;
+	text-decoration: none;
+}
+
+body {
+	font-family: 'JetBrains Mono', monospace;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	background-image: url('/pattern.png');
+	background-repeat: repeat;
+	background-size: 60px 60px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	color: rgb(var(--gray-dark));
+	font-size: 20px;
+	line-height: 1.7;
+}
+.prose {
+	font-size: 17px;
+}
+
+main {
+	width: 720px;
+	max-width: calc(100% - 2em);
+	margin: auto;
+	padding: 3em 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 0.5rem 0;
+	color: rgb(var(--black));
+	line-height: 1.2;
+}
+h1 {
+	font-size: 3.052em;
+}
+h2 {
+	font-size: 2.441em;
+}
+h3 {
+	font-size: 1.953em;
+}
+h4 {
+	font-size: 1.563em;
+}
+h5 {
+	font-size: 1.25em;
+}
+strong,
+b {
+	font-weight: 700;
+}
+a {
+	color: var(--accent);
+}
+a:hover {
+	color: var(--accent);
+}
+p {
+	margin-bottom: 1em;
+}
+.prose p {
+	margin-bottom: 2em;
+}
+
+/* testing custom outlines */
+/*h1, h2, h3, h4, h5, h6, */
+/*p {*/
+/*	position: relative;*/
+/*	background-color: #e88ae8;*/
+/*	padding: 20px;*/
+/*	margin: 10px 0;*/
+/*}*/
+
+/*h1::before, h2::before, h3::before, h4::before, h5::before, h6::before, p::before {*/
+/*	content: '';*/
+/*	position: absolute;*/
+/*	top: -5px;*/
+/*	left: -5px;*/
+/*	right: -5px;*/
+/*	bottom: -5px;*/
+/*	border-top: 5px solid #ff0000;*/
+/*	border-right: 5px solid #00ff00;*/
+/*	border-bottom: 5px solid #0000ff;*/
+/*	border-left: 5px solid #ff00ff;*/
+/*	pointer-events: none;*/
+/*}*/
+
+textarea {
+	width: 100%;
+	font-size: 16px;
+}
+input {
+	font-size: 16px;
+}
+table {
+	width: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+code {
+	padding: 2px 5px;
+	background-color: rgb(var(--gray-light));
+	border-radius: 2px;
+}
+pre {
+	padding: 1.5em;
+	border-radius: 8px;
+}
+pre > code {
+	all: unset;
+}
+
+pre, code {
+	font-family: inherit !important;
+}
+
+blockquote {
+	border-left: 4px solid var(--accent);
+	padding: 0 0 0 20px;
+	margin: 0px;
+	font-size: 1.333em;
+}
+hr {
+	border: none;
+	border-top: 1px solid rgb(var(--gray-light));
+}
+@media (max-width: 720px) {
+	body {
+		font-size: 18px;
+	}
+	main {
+		padding: 1em;
+	}
+}
+
+.sr-only {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+

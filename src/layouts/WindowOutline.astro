@@ -1,0 +1,18 @@
+---
+type Props = {
+    text: string,
+}
+const {text} = Astro.props;
+---
+
+<style>
+    .cborder {
+        border-width:3px;
+        border-style:solid;
+        border-color:#287EC7;
+    }
+</style>
+
+<p class="cborder">
+    {text}
+</p>
