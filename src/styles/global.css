@@ -53,7 +53,7 @@ nav a {
 }
 
 body {
-	font-family: 'JetBrains Mono', monospace;
+	font-family: 'zpix', monospace;
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -141,6 +141,19 @@ p {
 /*	pointer-events: none;*/
 /*}*/
 
+/*h1, h2, h3, h4, h5, h6, p {*/
+/*	position: relative;*/
+/*}*/
+
+/*h1, h2, h3, h4, h5, h6, p {*/
+/*	background-color: #e88ae8;*/
+/*	box-shadow:*/
+/*			0 0 0 5px #ff0000,*/
+/*			5px 0 0 5px #00ff00,*/
+/*			0 5px 0 5px #0000ff,*/
+/*			-5px 0 0 5px #ff00ff;*/
+/*}*/
+
 textarea {
 	width: 100%;
 	font-size: 16px;
@@ -206,4 +219,16 @@ hr {
 	white-space: nowrap;
 }
 
+.tags {
+	margin-top: 0.5rem;
+}
 
+.tag {
+	color: rgb(var(--accent));
+	text-decoration: none;
+	margin-right: 0.5rem;
+}
+
+.tag:hover {
+	text-decoration: underline;
+}

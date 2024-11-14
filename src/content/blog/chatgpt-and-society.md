@@ -2,6 +2,7 @@
 title: "Dumbification of the generation or how I see ChatGPT's impact on society"
 description: 'mindless rambling as per usual'
 pubDate: 'Nov 11 2024'
+tags: ['life']
 ---
 
 

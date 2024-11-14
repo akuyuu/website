@@ -2,6 +2,7 @@
 title: 'Testing markdown rendering'
 description: 'what title says'
 pubDate: 'Nov 11 2024'
+tags: []
 ---
 
 ```go

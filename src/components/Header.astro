@@ -4,13 +4,11 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		<h2>
-			<a href="/">{SITE_TITLE}</a>
-		</h2>
 		<div class="internal-links">
-			<a href="/">Home</a>
-			<a href="/blog">Blog</a>
-			<a href="/about">About</a>
+			<a href="/">{SITE_TITLE}</a>
+			<!--<a href="/">Home</a>-->
+			<a href="/blog">blog</a>
+			<!--<a href="/about">About</a>-->
 		</div>
 		<div class="font-toggle">
 			<button id="font-toggle">Switch Font</button>
@@ -18,9 +16,12 @@ import { SITE_TITLE } from '../consts';
 	</nav>
 </header>
 
-<script type="module" client:load>
+<link rel="preload" href="/pattern.png" as="image">
+
+<script type="module">
 	window.addEventListener('load', () => {
-		const storedFont = localStorage.getItem('font') || 'normal';
+
+		const storedFont = localStorage.getItem('font') || 'pixel';
 
 		if (storedFont === 'pixel') {
 			document.body.classList.add('pixel-font');
@@ -45,7 +46,7 @@ import { SITE_TITLE } from '../consts';
 			}
 
 			// might cause problems in the future teehee
-			document.body.offsetHeight;
+			// document.body.offsetHeight;
 		});
 	});
 </script>
