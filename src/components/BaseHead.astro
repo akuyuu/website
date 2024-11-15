@@ -11,15 +11,24 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
-<!-- Global Metadata -->
+<!-- global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
 
-<!-- Font preloads -->
-<link rel="preload" href="/fonts/JBMono-Regular.ttf" as="font" type="font/ttf" crossorigin />
-<link rel="preload" href="/fonts/zpix.ttf" as="font" type="font/ttf" crossorigin />
+<!-- font preloads -->
+<link rel="preload" href="/fonts/JBMono-Regular.ttf" as="font" type="font/ttf" crossorigin fetchpriority="high" />
+<link rel="preload" href="/fonts/zpix.ttf" as="font" type="font/ttf" crossorigin fetchpriority="high" />
 
-<!-- Canonical URL -->
+<!-- bg preload -->
+<!--we are base64 encoding it now lmao-->
+<!--<link rel="preload" href="/pattern.png" as="image" type="image/png" fetchpriority="high" crossorigin/>-->
+
+<!-- canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+
+<script is:inline>
+    const storedFont = localStorage.getItem('font') || 'pixel';
+    document.documentElement.classList.add(storedFont === 'pixel' ? 'pixel-font' : 'normal-font');
+</script>
