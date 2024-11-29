@@ -11,20 +11,6 @@
 	0 16px 32px rgba(var(--gray), 33%);
 }
 
-html, body {
-	min-height: 100vh;
-	margin: 0;
-	padding: 0;
-	font-size: 20px;
-	line-height: 1.7;
-	color: rgb(var(--gray-dark));
-	overflow-x: hidden;
-}
-
-body {
-	cursor: url('/cur.png'), pointer;
-}
-
 @font-face {
 	font-family: 'zpix';
 	src: url('/fonts/zpix.ttf') format('truetype');
@@ -57,6 +43,23 @@ body {
 
 	line-height: 1.7;
 	overflow-x: hidden;
+}
+
+html, body {
+	overscroll-behavior-y: none;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	line-height: 1.7;
+	color: rgb(var(--gray-dark));
+	overflow-x: hidden;
+	scrollbar-width: none;
+	background-attachment: fixed;
+}
+
+body {
+	cursor: url('/cur.png'), pointer;
 }
 
 button {
