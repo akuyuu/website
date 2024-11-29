@@ -8,15 +8,8 @@ import { SITE_TITLE } from '../consts';
 			<a href="/">{SITE_TITLE}</a>
 			<a href="/blog">blog</a>
 		</div>
-		<div class="font-toggle">
-			<button id="font-toggle">Switch Font</button>
-		</div>
 	</nav>
 </header>
-
-<script type="module" is:inline>
-
-</script>
 
 <style>
 	nav {
@@ -28,17 +21,5 @@ import { SITE_TITLE } from '../consts';
 	nav a {
 		padding: 1em 0.5em;
 		text-decoration: none;
-	}
-
-	.font-toggle button {
-		background: none;
-		border: 2px solid var(--accent);
-		padding: 0.5em;
-		cursor: pointer;
-	}
-
-	.font-toggle button:hover {
-		background-color: var(--accent);
-		color: white;
 	}
 </style>

@@ -1,0 +1,96 @@
+/* making text fit properly into boxes */
+p {
+    text-align: justify;
+    margin-bottom: 1em;
+}
+.prose p {
+    margin-bottom: 2em;
+}
+
+/* font setup and header styles */
+h1 { font-size: 2.602em; }
+h2 { font-size: 2.241em; }
+h3 { font-size: 1.753em; }
+h4 { font-size: 1.363em; }
+h5 { font-size: 1.15em; }
+
+/* Comprehensive element styling with improved outline handling */
+h1, h2, h3, h4, h5, h6, p {
+    position: relative;
+    padding: 0.5em;
+    background: #dedbe0;
+    border: 4px solid #3716c5;
+    border-radius: 0;
+
+    /* Adjusted box-shadow to extend fully */
+    box-shadow:
+            0 0 0 3px #dedbe0,
+            0 0 0 7px #3716c5;
+    margin: 0 0 1em;
+}
+
+/* Improved adjacent element spacing and outline connection */
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p,
+p + p {
+    margin-top: -3px;
+
+    box-shadow:
+            0 0 0 3px #dedbe0,
+            7px 0 0 #3716c5,
+            -7px 0 0 #3716c5,
+            7px 7px 0 #3716c5,
+            -7px 7px 0 #3716c5;
+}
+
+/* Merging headers with paragraphs */
+h1:has(+ p),
+h2:has(+ p),
+h3:has(+ p),
+h4:has(+ p),
+h5:has(+ p),
+h6:has(+ p),
+p:has(+ p) {
+    margin-bottom: 7px;
+}
+
+p + p {
+    margin-top: -30px;
+}
+
+/* Headings styling */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 0.5rem 0;
+    color: rgb(var(--black));
+    line-height: 1.2;
+    padding: 0.5em;
+    border-radius: 0;
+}
+
+/*code {*/
+/*    padding: 2px 5px;*/
+/*    background-color: rgb(var(--gray-light));*/
+/*    border-radius: 2px;*/
+/*}*/
+
+/* code box setup */
+pre {
+    padding: 1.0em;
+    border-radius: 0px;
+}
+
+pre > code {
+    all: unset;
+}
+
+/* something, idk */
+blockquote {
+    border-left: 4px solid var(--accent);
+    padding: 0 0 0 20px;
+    margin: 0;
+    font-size: 1.333em;
+}
