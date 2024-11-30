@@ -2,7 +2,6 @@
 title: 'Testing markdown rendering'
 description: 'what title says'
 pubDate: 'Nov 11 2024'
-tags: []
 ---
 
 ## header with some text
@@ -33,3 +32,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at elementum torto
 * point 3
 
 imagine conclusion here
+
+> some quote or something idk

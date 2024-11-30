@@ -19,17 +19,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <meta name="generator" content={Astro.generator} />
 
 <!-- font preloads -->
-<link rel="preload" href="/fonts/JBMono-Regular.ttf" as="font" type="font/ttf" crossorigin fetchpriority="high" />
 <link rel="preload" href="/fonts/zpix.ttf" as="font" type="font/ttf" crossorigin fetchpriority="high" />
-
-<!-- bg preload -->
-<!--we are base64 encoding it now lmao-->
-<!--<link rel="preload" href="/pattern.png" as="image" type="image/png" fetchpriority="high" crossorigin/>-->
 
 <!-- canonical URL -->
 <link rel="canonical" href={canonicalURL} />
-
-<script is:inline>
-    const storedFont = localStorage.getItem('font') || 'pixel';
-    document.documentElement.classList.add(storedFont === 'pixel' ? 'pixel-font' : 'normal-font');
-</script>
