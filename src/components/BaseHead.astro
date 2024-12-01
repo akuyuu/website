@@ -1,6 +1,4 @@
 ---
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
 import '../styles/windose.css';
 
@@ -18,7 +16,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
 
-<!-- font preloads -->
+<!--preloads -->
 <link rel="preload" href="/fonts/zpix.ttf" as="font" type="font/ttf" crossorigin fetchpriority="high" />
 
 <!-- canonical URL -->

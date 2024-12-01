@@ -20,70 +20,28 @@ const posts = (await getCollection('blog')).sort(
 			width: 960px;
 		}
 
-		section {
-			display: block;
-		}
-
-		.post {
-			margin-bottom: 2rem;
-			//border-bottom: 1px solid #eee;
-			//padding-bottom: 1rem;
-		}
-
-		.title {
-			font-size: 1.8rem;
-			color: rgb(var(--black));
-			margin: 0;
-		}
-
-		.date {
-			color: rgb(var(--gray));
-			font-size: 0.9rem;
-			margin-top: 0.5rem;
-		}
-
-		.post a:hover .title {
-			color: rgb(var(--accent));
-		}
-
-		.post a {
+		a {
+			color: black;
 			text-decoration: none;
-			display: block;
 		}
 
-		@media (max-width: 720px) {
-			main {
-				width: 100%;
-				padding: 1rem;
-			}
-
-			.post {
-				margin-bottom: 1rem;
-			}
-
-			.title {
-				font-size: 1.5rem;
-			}
+		a:hover {
+			color: var(--accent);
 		}
 	</style>
 </head>
 <body>
 <Header />
 <main>
-	<section>
+	<h1>blog!!</h1>
+	<p>
 		{
 			posts.map((post) => (
-				<div class="post">
-					<a href={`/blog/${post.slug}/`}>
-						<h4 class="title">{post.data.title}</h4>
-						<p class="date">
-							<FormattedDate date={post.data.pubDate} />
-						</p>
-					</a>
-				</div>
+				<a href={`/blog/${post.slug}/`}>>{post.data.title}<</a>
+				<br><FormattedDate date={post.data.pubDate} /><br>
 			))
 		}
-	</section>
+	</p>
 </main>
 </body>
 </html>

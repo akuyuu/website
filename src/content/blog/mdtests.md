@@ -32,5 +32,3 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at elementum torto
 * point 3
 
 imagine conclusion here
-
-> some quote or something idk

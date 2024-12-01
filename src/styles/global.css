@@ -57,18 +57,10 @@ html, body {
 	background-attachment: fixed;
 }
 
-body {
-	/*cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAXCAYAAADUUxW8AAACGUlEQVQ4jZWUX0tUQRjGf/PndNZaWZSiug7ZRARtMzYikzAVDVpEggrDKBLqursIIvA7ZF5l1EV0FytEweJFEv0RSegjVLhCVODqOWfeLtw1T+7a7nMzw8w88/7eeWdGjWWXRERoaU0wM3dU0YC0cYqOdJqukwlePS9KI2YrVnN2IEF7334mL3xpxItWOJSC1gNNzBY6yGUW5cWjb3URaEGXu4LvW2YLaT6+/VFf5EpHlAPA9y0PZtrqItDVBqMo2iIYPbFUcwNb1VwmGBxM09MNI9eeymFzSQ3fVP83m3LbOwYRJa6caWNoEAFi7qrYFW1EazhneFLoItn+jFxmMZbCrmazeYaICKlUC0fSPvlpIT8ttbErcubvdF/fAOeyJYZPfZKJ24cA1K6RtytQEHk++flj5OdeM5S9I7tGrigMQxRCIArxDM77gAmvYlFhfKXWaByunK8xisu9n3FOI6JxyuIYRykPi1TIA8BjcnwKWR1h+mVnbM/+/uPcmlKxUlnQiMD6OiwsFFhZKaJWox3otmlnOlsH9utnwMO7B9n7+zqazfJsl6v2TVzMLksu814m+pdjq893z8vSu68SBIFIKCKhyGhP/J7bxD7BUz7NqXjVkn4zRpI4DBvRGgBi4jT28ZvOqv9WqMHpdTR7KL9W9D/vq2adAx1x/94Mor4DmigqYeVGfWYCoVQ8jdUJUCFsKEIdvxN/AKB4yy5oTsFHAAAAAElFTkSuQmCC)*/
-	/*, pointer;*/
+*, html, a, button, .clickable, *:active{
 	cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAwElEQVRIicWVTQ6CMBBGvzIeBRdsTOo1Gjysph4D16YeRcBFMwErGCi081aEn/B4dFJVl03fYuD+OitsoNjy8BQHPrBOAwDMsekJwC3SNJ0hMzYF1jdNb8jENs1j2HbDyrw+T6CCFjfN1zBkaVMZwzVN5RqGzDWVMaSOvk+MNKzTwBswlW8q39BUj7/X8xj6deZNrNM/r5WdFDaLZXdDVZd+/TBhG963eTIY/pL0sxy7/84hNMsALsHfp+lb9zf8ACTxT/mDzpLPAAAAAElFTkSuQmCC)
-	,pointer;
+	,pointer !important;
 }
-
-a, button, .clickable {
-	cursor:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAwElEQVRIicWVTQ6CMBBGvzIeBRdsTOo1Gjysph4D16YeRcBFMwErGCi081aEn/B4dFJVl03fYuD+OitsoNjy8BQHPrBOAwDMsekJwC3SNJ0hMzYF1jdNb8jENs1j2HbDyrw+T6CCFjfN1zBkaVMZwzVN5RqGzDWVMaSOvk+MNKzTwBswlW8q39BUj7/X8xj6deZNrNM/r5WdFDaLZXdDVZd+/TBhG963eTIY/pL0sxy7/84hNMsALsHfp+lb9zf8ACTxT/mDzpLPAAAAAElFTkSuQmCC)
-	, pointer;
-}
-
 
 button {
 	font-family: inherit;
@@ -80,7 +72,7 @@ nav {
 	justify-content: space-between;
 }
 
-nav a {
+nav {
 	padding: 1em 0.5em;
 	text-decoration: none;
 }
@@ -90,7 +82,7 @@ nav a {
 }
 
 main {
-	width: 720px;
+	width: 960px;
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
