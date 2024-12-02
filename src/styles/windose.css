@@ -12,7 +12,7 @@ p, ul, pre {
     text-align: justify;
     margin-bottom: 1em;
 }
-.prose p, .prose ul {
+.prose p, .prose ul, .prose a {
     margin-bottom: 2em;
 }
 

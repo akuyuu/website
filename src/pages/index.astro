@@ -9,20 +9,29 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<title>hi there</title>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 960px;
+			}
+			p, ul {
+				margin-bottom: 34px;
+			}
+
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<p>hiii</p>
-			<p>i am a terminally online internet person that writes code every now and then. i really like that music i listen to and i have many thoughts in general.</p>
-			<p>if you want to contact me then you probably should just dm me on twitter or send a dm on discord, none of these should be blocked and i am always open for communication</p>
-			<p>ps: sorry if this website flickers or looks bad, first time making non-plain-html website so idk, spare me</p>
-			<p>let me know if you want your website to be here:</p>
-			<ul>
-				<li>your-website-could-be-here</li>
-				<li>and-yours-too!</li>
-			</ul>
-
+			<div>
+				<p>hiii<br>i am a terminally online internet person that writes code every now and then. i really like music i listen to and i tend to think a bit too much...</p>
+				<p>if you want to contact me then you probably should just dm me on twitter or discord, both should be open and i am always happy to talk about anything</p>
+				<p>let me know if you want your website to be here (or a shoutout in general!):</p>
+				<ul>
+					<li>your-website-could-be-here</li>
+					<li>or-your-name!</li>
+				</ul>
+				<p>contact me: @_akuyu on both twitter and discord</p>
+			</div>
 		</main>
 	</body>
 </html>
