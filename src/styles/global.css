@@ -50,7 +50,7 @@ html, body {
 
 *, html, *:active, *::before, *::after, .link:hover {
 	cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAwElEQVRIicWVTQ6CMBBGvzIeBRdsTOo1Gjysph4D16YeRcBFMwErGCi081aEn/B4dFJVl03fYuD+OitsoNjy8BQHPrBOAwDMsekJwC3SNJ0hMzYF1jdNb8jENs1j2HbDyrw+T6CCFjfN1zBkaVMZwzVN5RqGzDWVMaSOvk+MNKzTwBswlW8q39BUj7/X8xj6deZNrNM/r5WdFDaLZXdDVZd+/TBhG963eTIY/pL0sxy7/84hNMsALsHfp+lb9zf8ACTxT/mDzpLPAAAAAElFTkSuQmCC)
-	,pointer !important;
+	,auto !important;
 }
 
 button {

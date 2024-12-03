@@ -11,8 +11,9 @@ export default defineConfig({
 		assetsInclude: ['**/*.ttf', '**/*.png'],
 	},
 	markdown: {
-		shikiConfig: {
-			theme: 'catppuccin-frappe',
-		},
+		syntaxHighlight: 'prism',
+		// shikiConfig: {
+		// 	theme: 'catppuccin-frappe',
+		// },
 	},
 });

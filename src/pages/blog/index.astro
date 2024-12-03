@@ -14,6 +14,7 @@ const posts = (await getCollection('blog')).sort(
 <html lang="en">
 <head>
 	<title>/blog</title>
+	<link href="/themes/prism.css" rel="stylesheet" />
 	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	<style>
 		main {
@@ -37,8 +38,9 @@ const posts = (await getCollection('blog')).sort(
 	<p>
 		{
 			posts.map((post) => (
-				<a href={`/blog/${post.slug}/`}>>{post.data.title}<</a>
-				<br><FormattedDate date={post.data.pubDate} /><br>
+				<a href={`/blog/${post.slug}/`}>>{post.data.title}</a>
+				<br>
+				<FormattedDate date={post.data.pubDate} /><br>
 			))
 		}
 	</p>
