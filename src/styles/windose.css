@@ -1,13 +1,9 @@
-/* font setup and header styles */
 h1 { font-size: 2.602em; }
 h2 { font-size: 2.241em; }
 h3 { font-size: 1.753em; }
 h4 { font-size: 1.363em; }
 h5 { font-size: 1.15em; }
 
-/* paragraph, code and list start */
-
-/* making text fit properly into boxes */
 p, ul, pre {
     text-align: justify;
     margin-bottom: 1em;
@@ -16,7 +12,6 @@ p, ul, pre {
     margin-bottom: 2em;
 }
 
-/* Comprehensive element styling with improved outline handling */
 h1, h2, h3, h4, h5, h6, p, ul, pre, code {
     position: relative;
     padding: 0.5em;
@@ -24,14 +19,12 @@ h1, h2, h3, h4, h5, h6, p, ul, pre, code {
     border: 4px solid #3716c5;
     border-radius: 0;
 
-    /* Adjusted box-shadow to extend fully */
     box-shadow:
             0 0 0 3px #dedbe0,
             0 0 0 7px #3716c5;
     margin: 0 0 1em;
 }
 
-/* Improved adjacent element spacing and outline connection */
 h1 + p, h1 + ul,
 h2 + p, h2 + ul,
 h3 + p, h3 + ul,
@@ -52,7 +45,6 @@ pre + p, pre + ul{
             -7px 7px 0 #3716c5;
 }
 
-/* Merging headers with paragraphs and lists */
 h1:has(+ p), h1:has(+ ul), h1:has(+ pre),
 h2:has(+ p), h2:has(+ ul), h2:has(+ pre),
 h3:has(+ p), h3:has(+ ul), h3:has(+ pre),
@@ -82,9 +74,8 @@ pre + p {
     margin-top: -2px
 }
 
-/* Unordered list specific adjustments */
 ul {
-    padding-left: 2em; /* Maintain list indentation */
+    padding-left: 2em;
 }
 
 /* experimental */
@@ -93,7 +84,6 @@ ul {
 /*    background-color: #f4dafa;*/
 /*}*/
 
-/* code box setup */
 pre {
     background: #dedbe0;
     padding: 1.0em;

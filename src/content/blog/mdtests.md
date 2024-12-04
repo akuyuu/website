@@ -16,15 +16,45 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et magna laoreet, d
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper diam nisi, quis pharetra tortor maximus vitae. Fusce elit erat, scelerisque vel orci quis, tincidunt venenatis lacus. Pellentesque vitae mattis mi. Fusce quis ultrices magna. Donec tristique eros eros, vitae eleifend massa interdum a. Curabitur consequat mattis mauris sed pulvinar. 
 
 ```go
+// taken from https://gobyexample.com/channels
 package main
 
 import "fmt"
 
-func main(){
-    fmt.Println("hello blogpost")
+func main() {
+
+    messages := make(chan string)
+
+    go func() { messages <- "ping" }()
+
+    msg := <-messages
+    fmt.Println(msg)
 }
 ```
-
+```json
+{
+    "glossary": {
+        "title": "example glossary",
+		"GlossDiv": {
+            "title": "S",
+			"GlossList": {
+                "GlossEntry": {
+                    "ID": "SGML",
+					"SortAs": "SGML",
+					"GlossTerm": "Standard Generalized Markup Language",
+					"Acronym": "SGML",
+					"Abbrev": "ISO 8879:1986",
+					"GlossDef": {
+                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
+						"GlossSeeAlso": ["GML", "XML"]
+                    },
+					"GlossSee": "markup"
+                }
+            }
+        }
+    }
+}
+```
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at elementum tortor, ac ornare mi. Nulla laoreet libero id turpis congue congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer non consectetur arcu, ac mollis est. Vivamus quis mauris ultricies, interdum risus id, porttitor lacus. Etiam elementum.
 
 * point 1
