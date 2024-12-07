@@ -1,0 +1,91 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>/blog</title>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+        main {
+            width: 960px;
+        }
+        p, ul {
+            margin-bottom: 34px;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+<Header />
+<main>
+    <h1>questions which you <i>might</i> want hear answers to</h1>
+    <p>Q: why the hell does your website has this domain and pages look like this??<br>
+        A: domain part: idk i just was just browsing something online and saw .rip domain and then i thought about
+        ame(nso) for some reason and it clicked and i was like  "oh wow this sounds great i should really do this"
+        so yeah, not very inspiring.<br>
+        design part: because i am not really good at coming up with
+        graphics-related things so i just got inspired by nso's window layout and decided to commit to the bit. at first
+        i had much more interesting idea but then i scrapped it because i dont know how to actually work with graphics in browsers
+        so i put it in long-term plans and went with <i>this</i>
+    </p>
+    <p>
+        Q: wow i think ur cool what do you even do in your life?<br>
+        A: yeah no i am not cool by any means and my life is not that interesting, just a regular life.
+        its not that boring though, sometimes i get incredible human to human interactions which leave me perplexed
+        (maybe i should get a separate page to share them, idk)
+    </p>
+    <p>
+        Q: where are you from? how old are you? ...and other not so interesting questions<br>
+        A: nope sorry not telling :^))) ill let this be a small guessing game for now, tbh it shouldnt be that hard
+        (hint: i am far from being old and im located somewhere in eu)
+    </p>
+    <p>
+        Q: what do you like?<br>
+        A: sleeping. but i dont get enough of sleep.... i also really really like talking about my interests
+    </p>
+    <p>
+        Q: what do you not like then?<br>
+        A: pretentious people. like really dont like them. i also dont like overly serious people. like imagine
+        always being serious, that is no fun, especially when you try to approach people like that, theres literally no angle to do that from<br>
+        i also dont like heat and hot weather in general, absolutely disgusting, winter for the win
+        (although summer evening are incredible and probably only good thing about warm/hot seasons)
+    </p>
+    <p>
+        Q: you mentioned interests, what are you interested in?<br>
+        A: i used to play a lot of games, so naturally i like games. it would be logical to list games i like here but eeh, dont wanna
+        (although you can probably already see one that i really like :^))<br>
+        i also really like music i listen to and im not exactly limited to one genre
+    </p>
+    <p>
+        Q: you piss me off and you should grow up and change as a person!!<br>
+        A: sorry... but also nope i am not really willing to change, i do sound more normal irl to attempt to appeal to people tho
+        (and it seems to work so yeah, draw conclusions yourself)
+    </p>
+    <p>
+        Q: okay but are you actually normal or not then?<br>
+        A: idk i usually dont think about this because why bother? its like thinking about myself and falling into pit of despair
+        after discovering something about myself, which is why i prefer not doing that
+    </p>
+    <p>
+        Q: do you "fw" [some specific thing]?<br>
+        A: quick and inaccurate answer is: if thing is extremely popular then theres a good chance that no, otherwise almost always yes.
+        in any case you can just ask me directly if you want to know for sure
+    </p>
+    <p>
+        this concludes qa page for now, might add/remove entries in the future.
+    </p>
+</main>
+</body>
+</html>

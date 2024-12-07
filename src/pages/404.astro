@@ -1,6 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
+// import Header from '../components/Header.astro';
 ---
 
 <!doctype html>
@@ -8,12 +8,23 @@ import Header from '../components/Header.astro';
 <head>
     <title>oops</title>
     <BaseHead title={`404....`} description="page does not exist" />
+    <style>
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+    </style>
 </head>
 <body>
-<Header />
+<!--<Header />-->
 <main>
     <h1>404</h1>
-    <p>either nonexistent or under construction, try again later!</p><br>
+    <p>either nonexistent or under construction, try again later!<br>
+        <a href="/"> to the main page</a></p><br>
 </main>
 </body>
 </html>
