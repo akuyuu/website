@@ -24,3 +24,5 @@ pnpm-debug.log*
 .vscode
 # i idk how this got here but oh well.
 ~
+# same goes for obsidian...
+.obsidian

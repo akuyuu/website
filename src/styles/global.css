@@ -11,14 +11,14 @@
 	0 16px 32px rgba(var(--gray), 33%);
 }
 
-/*@font-face {*/
-/*	font-family: 'zpix';*/
-/*	src: url('/fonts/zpix.woff2') format('woff2'),*/
-/*		url('/fonts/zpix.woff') format('woff');*/
-/*	font-weight: normal;*/
-/*	font-style: normal;*/
-/*	font-display: optional;*/
-/*}*/
+@font-face {
+	font-family: 'zpix';
+	src: url('/fonts/zpix.woff2') format('woff2'),
+		url('/fonts/zpix.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: optional;
+}
 
 body {
 	font-family: 'zpix', monospace;
