@@ -33,7 +33,7 @@ h5 + p, h5 + ul,
 h6 + p, h6 + ul,
 p + p, p + ul,
 ul + p, ul + ul,
-p + pre,
+p + pre, pre+pre,
 pre + p, pre + ul{
     margin-top: -3px;
 
@@ -51,23 +51,27 @@ h3:has(+ p), h3:has(+ ul), h3:has(+ pre),
 h4:has(+ p), h4:has(+ ul), h4:has(+ pre),
 h5:has(+ p), h5:has(+ ul), h5:has(+ pre),
 h6:has(+ p), h6:has(+ ul), h6:has(+ pre),
-p:has(+ p), p:has(+ ul), p:has(+ pre),
+p:has(+ p), p:has(+ ul),
 pre:has(+ p), pre:has(+ ul), pre:has(+ pre),
 ul:has(+ p), ul:has(+ ul) ul:has(+ pre) {
-    margin-bottom: 7px;
+    margin-bottom: 6px;
 }
 
 h4[class='title']{
     margin-bottom: -100px;
 }
 
+/*pre:has(+ pre){*/
+/*    margin-bottom: -1px;*/
+/*}*/
+
 p + p, p + ul,
 ul + p, ul + ul {
-    margin-top: -30px;
+    margin-top: -31px;
 }
 
 p + pre {
-    margin-top: -30px;
+    margin-top: -31px;
 }
 
 pre + p {
@@ -78,23 +82,15 @@ ul {
     padding-left: 2em;
 }
 
-/* experimental */
-/*h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover,*/
-/*p:hover, ul:hover, pre:hover{*/
-/*    background-color: #f4dafa;*/
-/*}*/
-
 pre {
     background: #dedbe0;
     padding: 1.0em;
-    border-radius: 0px;
 }
 
 pre > code {
     all: unset;
 }
 
-/* stupid quotes that ill have to fix in the future if i want them hhhhh */
 blockquote {
     /*border-left: 4px solid var(--accent);*/
     /*padding: 0 0 0 20px;*/

@@ -1,6 +1,5 @@
 ---
 title: 'Testing auto rendering'
-description: 'what title says'
 pubDate: 'Nov 11 2024'
 ---
 
