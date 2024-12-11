@@ -1,45 +1,47 @@
 ---
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
+import {SITE_TITLE, SITE_DESCRIPTION} from '../../consts';
+import {getCollection} from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 
 const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
 <!doctype html>
 <html lang="en">
-<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+<Header pageTitle="/blog"/>
+
 <style>
-	main {
-		width: 960px;
-	}
+    main {
+        width: 960px;
+    }
 
-	a {
-		color: #212939;
-		text-decoration: none;
-	}
+    a {
+        color: #212939;
+        text-decoration: none;
+    }
 
-	a:hover {
-		color: var(--accent);
-	}
+    a:hover {
+        color: var(--accent);
+    }
 </style>
+
 <body>
-<Header pageTitle="/blog" />
 <main>
-	<h1>blog!!</h1>
-	<p>
-		{
-			posts.map((post) => (
-				<a href={`/blog/${post.slug}/`}>>{post.data.title}</a>
-				<br>
-				<FormattedDate date={post.data.pubDate} /><br>
-			))
-		}
-	</p>
+    <h1>blog!!</h1>
+    <p>
+        {
+            posts.map((post) => (
+                    <a href={`/blog/${post.slug}/`}>>{post.data.title}</a>
+                    <br>
+                    <FormattedDate date={post.data.pubDate}/><br>
+            ))
+        }
+    </p>
 </main>
 </body>
 </html>

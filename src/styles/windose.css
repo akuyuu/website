@@ -1,14 +1,32 @@
-h1 { font-size: 2.602em; }
-h2 { font-size: 2.241em; }
-h3 { font-size: 1.753em; }
-h4 { font-size: 1.363em; }
-h5 { font-size: 1.15em; }
-p { font-size: 0.95em; }
+h1 {
+    font-size: 2.602em;
+}
+
+h2 {
+    font-size: 2.241em;
+}
+
+h3 {
+    font-size: 1.753em;
+}
+
+h4 {
+    font-size: 1.363em;
+}
+
+h5 {
+    font-size: 1.15em;
+}
+
+p {
+    font-size: 0.95em;
+}
 
 p, ul, pre {
     text-align: justify;
     margin-bottom: 1em;
 }
+
 .prose p, .prose ul, .prose a {
     margin-bottom: 2em;
 }
@@ -17,12 +35,11 @@ h1, h2, h3, h4, h5, h6, p, ul, pre, code {
     position: relative;
     padding: 0.5em;
     background: #dedbe0;
-    border: 4px solid #3716c5;
+    border: 6px solid #3716c5;
     border-radius: 0;
 
-    box-shadow:
-            0 0 0 3px #dedbe0,
-            0 0 0 7px #3716c5;
+    box-shadow: 0 0 0 6px #dedbe0,
+    0 0 0 12px #3716c5;
     margin: 0 0 1em;
 }
 
@@ -34,16 +51,15 @@ h5 + p, h5 + ul,
 h6 + p, h6 + ul,
 p + p, p + ul,
 ul + p, ul + ul,
-p + pre, pre+pre,
-pre + p, pre + ul{
+p + pre, pre + pre,
+pre + p, pre + ul {
     margin-top: -3px;
 
-    box-shadow:
-            0 0 0 3px #dedbe0,
-            7px 0 0 #3716c5,
-            -7px 0 0 #3716c5,
-            7px 7px 0 #3716c5,
-            -7px 7px 0 #3716c5;
+    box-shadow: 0 0 0 6px #dedbe0,
+    12px 0 0 #3716c5,
+    -12px 0 0 #3716c5,
+    12px 12px 0 #3716c5,
+    -12px 12px 0 #3716c5;
 }
 
 h1:has(+ p), h1:has(+ ul), h1:has(+ pre),
@@ -55,10 +71,10 @@ h6:has(+ p), h6:has(+ ul), h6:has(+ pre),
 p:has(+ p), p:has(+ ul),
 pre:has(+ p), pre:has(+ ul), pre:has(+ pre),
 ul:has(+ p), ul:has(+ ul) ul:has(+ pre) {
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
-h4[class='title']{
+h4[class='title'] {
     margin-bottom: -100px;
 }
 
@@ -68,11 +84,11 @@ h4[class='title']{
 
 p + p, p + ul,
 ul + p, ul + ul, ul + pre {
-    margin-top: -30px;
+    margin-top: -28px
 }
 
-p+pre{
-    margin-top: -29px;
+p + pre {
+    margin-top: -27px;
 }
 
 pre + p {

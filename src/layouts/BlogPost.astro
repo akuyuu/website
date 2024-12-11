@@ -3,28 +3,28 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 
-const { title, description, pubDate, _} = Astro.props;
+const {title, description, pubDate, _} = Astro.props;
 ---
 
 <html lang="en">
 
-<link href="/themes/prism.css" rel="stylesheet" />
-<BaseHead title={title} description={description} />
+<link href="/themes/prism.css" rel="stylesheet"/>
+<BaseHead title={title} description={description}/>
 
 <body>
-<Header pageTitle={title} />
+<Header pageTitle={title}/>
 <main>
-	<article>
-		<div class="prose">
-			<div class="title">
-				<h1>{title}</h1>
-			</div>
-			<slot />
-			<div class="date">
-				<FormattedDate date={pubDate} />
-			</div>
-		</div>
-	</article>
+    <article>
+        <div class="prose">
+            <div class="title">
+                <h1>{title}</h1>
+            </div>
+            <slot/>
+            <div class="date">
+                <FormattedDate date={pubDate}/>
+            </div>
+        </div>
+    </article>
 </main>
 </body>
 </html>
