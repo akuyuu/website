@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-5tznm7mj> <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><!--<link rel="icon" type="image/svg+xml" href="/favicon.svg" />--><meta name="generator" content="Astro v5.0.5"><!--preloads idk it works better this way --><link rel="preload" href="/fonts/zpix.woff" as="font" type="font/ttf" crossorigin fetchpriority="high"><link rel="preload" href="/fonts/zpix.woff2" as="font" type="font/ttf" crossorigin fetchpriority="high"><link rel="preload" href="/eep512.png" as="image" type="image/png" crossorigin fetchpriority="high"><link rel="preload" href="/panic512.png" as="image" type="image/png" crossorigin fetchpriority="high"><link rel="preload" href="/cry512.png" as="image" type="image/png" crossorigin fetchpriority="high"><!-- canonical URL --><link rel="canonical" href="https://amechan.rip/blog/"><head><title>/blog</title><link id="favicon" rel="icon" href="/eep512.png"><link rel="stylesheet" href="/_astro/_slug_.C7sPP1zU.css">
+<style>nav[data-astro-cid-3ef6ksr2]{display:flex;align-items:center;justify-content:space-between}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{padding:1em .5em;text-decoration:none}
+main[data-astro-cid-5tznm7mj]{width:960px}a[data-astro-cid-5tznm7mj]{color:#212939;text-decoration:none}a[data-astro-cid-5tznm7mj]:hover{color:var(--accent)}
+[data-astro-image]{width:100%;height:auto;object-fit:var(--fit);object-position:var(--pos);aspect-ratio:var(--w) / var(--h)}[data-astro-image=responsive]{max-width:calc(var(--w) * 1px);max-height:calc(var(--h) * 1px)}[data-astro-image=fixed]{width:calc(var(--w) * 1px);height:calc(var(--h) * 1px)}
+</style></head> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <div class="internal-links" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2>home</a> <a href="/blog" data-astro-cid-3ef6ksr2>blog</a> </div> </nav> </header> <script>(function(){const ACTIVE = "/eep512.png";
+const INACTIVE = "/panic512.png";
+const RECOVER = "/cry512.png";
+
+	let originalTitle = document.title;
+	let left = false;
+
+	function handleVisibilityChange() {
+		const favicon = document.getElementById('favicon');
+
+		if (document.hidden) {
+			setTimeout(() => {
+				if (document.hidden) {
+					favicon.href = INACTIVE;
+					left = true;
+					document.title = 'dont ignore me....';
+				}
+			}, 4000);
+		} else if (left){
+			favicon.href = RECOVER;
+			left = false;
+			document.title = 'never leave me again!!';
+
+			setTimeout(() => {
+				favicon.href = ACTIVE;
+				document.title = originalTitle;
+			}, 4000);
+		}
+	}
+
+	document.addEventListener('visibilitychange', handleVisibilityChange);
+
+	function cleanup() {
+		document.removeEventListener('visibilitychange', handleVisibilityChange);
+	}
+
+	document.addEventListener('astro:unmount', cleanup);
+})();</script> <body data-astro-cid-5tznm7mj> <main data-astro-cid-5tznm7mj> <h1 data-astro-cid-5tznm7mj>blog!!</h1> <p data-astro-cid-5tznm7mj> <a href="/blog/mdtests/" data-astro-cid-5tznm7mj>>Testing auto rendering</a>
+                    <br data-astro-cid-5tznm7mj>
+                    <time datetime="2024-11-10T23:00:00.000Z"> Nov 11, 2024 </time><br data-astro-cid-5tznm7mj> </p> </main> </body></html>

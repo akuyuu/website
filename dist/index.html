@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-j7pv25f6> <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><!--<link rel="icon" type="image/svg+xml" href="/favicon.svg" />--><meta name="generator" content="Astro v5.0.5"><!--preloads idk it works better this way --><link rel="preload" href="/fonts/zpix.woff" as="font" type="font/ttf" crossorigin fetchpriority="high"><link rel="preload" href="/fonts/zpix.woff2" as="font" type="font/ttf" crossorigin fetchpriority="high"><link rel="preload" href="/eep512.png" as="image" type="image/png" crossorigin fetchpriority="high"><link rel="preload" href="/panic512.png" as="image" type="image/png" crossorigin fetchpriority="high"><link rel="preload" href="/cry512.png" as="image" type="image/png" crossorigin fetchpriority="high"><!-- canonical URL --><link rel="canonical" href="https://amechan.rip/"><head><title>hi there</title><link id="favicon" rel="icon" href="/eep512.png"><link rel="stylesheet" href="/_astro/_slug_.C7sPP1zU.css">
+<style>nav[data-astro-cid-3ef6ksr2]{display:flex;align-items:center;justify-content:space-between}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{padding:1em .5em;text-decoration:none}
+main[data-astro-cid-j7pv25f6]{width:960px}p[data-astro-cid-j7pv25f6],ul[data-astro-cid-j7pv25f6]{margin-bottom:34px}a[data-astro-cid-j7pv25f6]{color:#212939;text-decoration:none}a[data-astro-cid-j7pv25f6]:hover{color:var(--accent)}
+</style></head> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <div class="internal-links" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2>home</a> <a href="/blog" data-astro-cid-3ef6ksr2>blog</a> </div> </nav> </header> <script>(function(){const ACTIVE = "/eep512.png";
+const INACTIVE = "/panic512.png";
+const RECOVER = "/cry512.png";
+
+	let originalTitle = document.title;
+	let left = false;
+
+	function handleVisibilityChange() {
+		const favicon = document.getElementById('favicon');
+
+		if (document.hidden) {
+			setTimeout(() => {
+				if (document.hidden) {
+					favicon.href = INACTIVE;
+					left = true;
+					document.title = 'dont ignore me....';
+				}
+			}, 4000);
+		} else if (left){
+			favicon.href = RECOVER;
+			left = false;
+			document.title = 'never leave me again!!';
+
+			setTimeout(() => {
+				favicon.href = ACTIVE;
+				document.title = originalTitle;
+			}, 4000);
+		}
+	}
+
+	document.addEventListener('visibilitychange', handleVisibilityChange);
+
+	function cleanup() {
+		document.removeEventListener('visibilitychange', handleVisibilityChange);
+	}
+
+	document.addEventListener('astro:unmount', cleanup);
+})();</script> <body data-astro-cid-j7pv25f6> <main data-astro-cid-j7pv25f6> <div data-astro-cid-j7pv25f6> <p data-astro-cid-j7pv25f6>
+hiii<br data-astro-cid-j7pv25f6>im a terminally online internet person that writes code every now and then (usually i just
+            post whatever thoughts i have at the moment and i think a bit too much...)
+</p> <p data-astro-cid-j7pv25f6>
+for now there are no blogs published (still polishing things up) but you can check out small
+<a href="/qa" data-astro-cid-j7pv25f6>/qa</a> page with some facts about me
+</p> <p data-astro-cid-j7pv25f6>
+in the future i want add some kind of friends list here so lmk if you want to be featured here!! both websites and names are fine
+</p> <p data-astro-cid-j7pv25f6>
+contact me: @_akuyu on both <a href="https://x.com/_akuyu" data-astro-cid-j7pv25f6> twitter</a> and discord<br data-astro-cid-j7pv25f6>
+do not hesitate to ask me anything you want (quite literally anything, i dont mind)
+</p> </div> </main> </body></html>
