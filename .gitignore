@@ -1,5 +1,5 @@
 # build output - testing things!
- dist/
+dist/
 # generated types
 .astro/
 .idea/
