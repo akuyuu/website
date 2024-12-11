@@ -1,6 +1,17 @@
 ---
-import { SITE_TITLE } from '../consts';
+interface Props {
+	pageTitle?: string;
+}
+
+const { pageTitle = SITE_TITLE } = Astro.props;
+
+import { SITE_TITLE, ACTIVE_FAVICON, INACTIVE_FAVICON } from '../consts';
 ---
+
+<head>
+	<title>{pageTitle}</title>
+	<link id="favicon" rel="icon" href={ACTIVE_FAVICON}>
+</head>
 
 <header>
 	<nav>
@@ -10,6 +21,39 @@ import { SITE_TITLE } from '../consts';
 		</div>
 	</nav>
 </header>
+
+<script define:vars={{ ACTIVE_FAVICON, INACTIVE_FAVICON }}>
+	let originalTitle = document.title;
+
+	function handleVisibilityChange() {
+		const favicon = document.getElementById('favicon');
+
+		if (document.hidden) {
+			setTimeout(() => {
+				if (document.hidden) {
+					favicon.href = INACTIVE_FAVICON;
+					document.title = 'dont ignore me....';
+				}
+			}, 5000);
+		} else {
+			favicon.href = ACTIVE_FAVICON;
+
+			document.title = 'dont leave me again!!';
+
+			setTimeout(() => {
+				document.title = originalTitle;
+			}, 3000);
+		}
+	}
+
+	document.addEventListener('visibilitychange', handleVisibilityChange);
+
+	function cleanup() {
+		document.removeEventListener('visibilitychange', handleVisibilityChange);
+	}
+
+	document.addEventListener('astro:unmount', cleanup);
+</script>
 
 <style>
 	nav {

@@ -3,6 +3,7 @@ h2 { font-size: 2.241em; }
 h3 { font-size: 1.753em; }
 h4 { font-size: 1.363em; }
 h5 { font-size: 1.15em; }
+p { font-size: 0.95em; }
 
 p, ul, pre {
     text-align: justify;
@@ -66,16 +67,16 @@ h4[class='title']{
 /*}*/
 
 p + p, p + ul,
-ul + p, ul + ul {
-    margin-top: -31px;
+ul + p, ul + ul, ul + pre {
+    margin-top: -30px;
 }
 
-p + pre {
-    margin-top: -31px;
+p+pre{
+    margin-top: -29px;
 }
 
 pre + p {
-    margin-top: -2px
+    /*margin-top: -2px*/
 }
 
 ul {

@@ -2,14 +2,6 @@
 import '../styles/global.css';
 import '../styles/windose.css';
 
-const zpix = `
-    @font-face {
-        font-family: 'zpix';
-        src: url('/fonts/zpix-o.woff2') format('woff2');
-        font-display: optional;
-    }
-`
-
 interface Props {
     title: string;
     description: string;
@@ -17,7 +9,6 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
-<style set:html={zpix}></style>
 <meta charset="utf-8" />
 
 <meta name="viewport" content="width=device-width,initial-scale=1" />
