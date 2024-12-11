@@ -10,9 +10,9 @@ const {title, description, pubDate, _} = Astro.props;
 
 <link href="/themes/prism.css" rel="stylesheet"/>
 <BaseHead title={title} description={description}/>
+<Header pageTitle={title}/>
 
 <body>
-<Header pageTitle={title}/>
 <main>
     <article>
         <div class="prose">

@@ -3,5 +3,6 @@
 
 export const SITE_TITLE = 'home';
 export const SITE_DESCRIPTION = 'certified website:tm:';
-export const ACTIVE_FAVICON = 'favicon.svg';
-export const INACTIVE_FAVICON = 'cry128.gif';
+export const ACTIVE = '/eep512.png';
+export const INACTIVE = '/panic512.png';
+export const RECOVER = '/cry512.png';

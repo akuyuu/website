@@ -28,7 +28,7 @@ p, ul, pre {
 }
 
 .prose p, .prose ul, .prose a {
-    margin-bottom: 2em;
+    margin-bottom: 2.1em;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, pre, code {
@@ -48,12 +48,22 @@ h2 + p, h2 + ul,
 h3 + p, h3 + ul,
 h4 + p, h4 + ul,
 h5 + p, h5 + ul,
-h6 + p, h6 + ul,
+h6 + p, h6 + ul {
+    margin-top: -3px;
+
+    box-shadow: 0 0 0 6px #dedbe0,
+    12px 0 0 #3716c5,
+    -12px 0 0 #3716c5,
+    12px 12px 0 #3716c5,
+    -12px 12px 0 #3716c5;
+}
+
+
 p + p, p + ul,
 ul + p, ul + ul,
 p + pre, pre + pre,
 pre + p, pre + ul {
-    margin-top: -3px;
+    margin-top: -4px;
 
     box-shadow: 0 0 0 6px #dedbe0,
     12px 0 0 #3716c5,

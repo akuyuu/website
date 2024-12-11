@@ -4,12 +4,12 @@ interface Props {
 }
 
 const { pageTitle = SITE_TITLE } = Astro.props;
-import { SITE_TITLE, ACTIVE_FAVICON, INACTIVE_FAVICON } from '../consts';
+import { SITE_TITLE, ACTIVE, INACTIVE, RECOVER } from '../consts';
 ---
 
 <head>
 	<title>{pageTitle}</title>
-	<link id="favicon" rel="icon" href={ACTIVE_FAVICON}>
+	<link id="favicon" rel="icon" href={ACTIVE}>
 </head>
 
 <header>
@@ -21,7 +21,7 @@ import { SITE_TITLE, ACTIVE_FAVICON, INACTIVE_FAVICON } from '../consts';
 	</nav>
 </header>
 
-<script define:vars={{ ACTIVE_FAVICON, INACTIVE_FAVICON }}>
+<script define:vars={{ ACTIVE, INACTIVE, RECOVER }}>
 	let originalTitle = document.title;
 	let left = false;
 
@@ -31,17 +31,18 @@ import { SITE_TITLE, ACTIVE_FAVICON, INACTIVE_FAVICON } from '../consts';
 		if (document.hidden) {
 			setTimeout(() => {
 				if (document.hidden) {
-					favicon.href = INACTIVE_FAVICON;
+					favicon.href = INACTIVE;
 					left = true;
 					document.title = 'dont ignore me....';
 				}
 			}, 4000);
 		} else if (left){
-			favicon.href = ACTIVE_FAVICON;
+			favicon.href = RECOVER;
 			left = false;
 			document.title = 'never leave me again!!';
 
 			setTimeout(() => {
+				favicon.href = ACTIVE;
 				document.title = originalTitle;
 			}, 4000);
 		}
