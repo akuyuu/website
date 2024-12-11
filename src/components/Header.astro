@@ -4,7 +4,6 @@ interface Props {
 }
 
 const { pageTitle = SITE_TITLE } = Astro.props;
-
 import { SITE_TITLE, ACTIVE_FAVICON, INACTIVE_FAVICON } from '../consts';
 ---
 
@@ -24,6 +23,7 @@ import { SITE_TITLE, ACTIVE_FAVICON, INACTIVE_FAVICON } from '../consts';
 
 <script define:vars={{ ACTIVE_FAVICON, INACTIVE_FAVICON }}>
 	let originalTitle = document.title;
+	let left = false;
 
 	function handleVisibilityChange() {
 		const favicon = document.getElementById('favicon');
@@ -32,17 +32,18 @@ import { SITE_TITLE, ACTIVE_FAVICON, INACTIVE_FAVICON } from '../consts';
 			setTimeout(() => {
 				if (document.hidden) {
 					favicon.href = INACTIVE_FAVICON;
+					left = true;
 					document.title = 'dont ignore me....';
 				}
-			}, 5000);
-		} else {
+			}, 4000);
+		} else if (left){
 			favicon.href = ACTIVE_FAVICON;
-
-			document.title = 'dont leave me again!!';
+			left = false;
+			document.title = 'never leave me again!!';
 
 			setTimeout(() => {
 				document.title = originalTitle;
-			}, 3000);
+			}, 4000);
 		}
 	}
 

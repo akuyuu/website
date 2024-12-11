@@ -6,31 +6,28 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<title>hi there</title>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			main {
-				width: 960px;
-			}
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	<Header pageTitle="hi there"/>
+	<style>
+		main {
+			width: 960px;
+		}
 
-			p, ul {
-				margin-bottom: 34px;
-			}
+		p, ul {
+			margin-bottom: 34px;
+		}
 
-			a {
-				color: #212939;
-				text-decoration: none;
-			}
+		a {
+			color: #212939;
+			text-decoration: none;
+		}
 
-			a:hover {
-				color: var(--accent);
-			}
-
-		</style>
-	</head>
+		a:hover {
+			color: var(--accent);
+		}
+	</style>
 	<body>
-		<Header />
+
 		<main>
 			<div>
 				<p>

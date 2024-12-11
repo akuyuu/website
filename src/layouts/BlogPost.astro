@@ -7,14 +7,12 @@ const { title, description, pubDate, _} = Astro.props;
 ---
 
 <html lang="en">
-<head>
-	<link href="/themes/prism.css" rel="stylesheet" />
-	<BaseHead title={title} description={description} />
-	<title>{title}</title>
-</head>
+
+<link href="/themes/prism.css" rel="stylesheet" />
+<BaseHead title={title} description={description} />
 
 <body>
-<Header />
+<Header pageTitle={title} />
 <main>
 	<article>
 		<div class="prose">

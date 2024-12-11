@@ -12,27 +12,23 @@ const posts = (await getCollection('blog')).sort(
 
 <!doctype html>
 <html lang="en">
-<head>
-	<title>/blog</title>
-	<!--<link href="/themes/prism.css" rel="stylesheet" />-->
-	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	<style>
-		main {
-			width: 960px;
-		}
+<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+<style>
+	main {
+		width: 960px;
+	}
 
-		a {
-			color: #212939;
-			text-decoration: none;
-		}
+	a {
+		color: #212939;
+		text-decoration: none;
+	}
 
-		a:hover {
-			color: var(--accent);
-		}
-	</style>
-</head>
+	a:hover {
+		color: var(--accent);
+	}
+</style>
 <body>
-<Header />
+<Header pageTitle="/blog" />
 <main>
 	<h1>blog!!</h1>
 	<p>

@@ -6,29 +6,26 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 
 <!doctype html>
 <html lang="en">
-<head>
-    <title>/blog</title>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <style>
-        main {
-            width: 960px;
-        }
-        p, ul {
-            margin-bottom: 34px;
-        }
+<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+<style>
+    main {
+        width: 960px;
+    }
+    p, ul {
+        margin-bottom: 34px;
+    }
 
-        a {
-            color: black;
-            text-decoration: none;
-        }
+    a {
+        color: black;
+        text-decoration: none;
+    }
 
-        a:hover {
-            color: var(--accent);
-        }
-    </style>
-</head>
+    a:hover {
+        color: var(--accent);
+    }
+</style>
 <body>
-<Header />
+<Header pageTitle={"/blog"} />
 <main>
     <h2>questions which you <i>might</i> want hear answers to</h2>
     <p>Q: why the hell does your website has this domain and pages look like this??<br>
