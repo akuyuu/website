@@ -15,8 +15,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <!--<link rel="icon" type="image/svg+xml" href="/favicon.svg" />-->
 <meta name="generator" content={Astro.generator} />
 
-<!--preload -->
-<!--<link rel="preload" href="/fonts/zpix.ttf" as="font" type="font/ttf" crossorigin fetchpriority="high" />-->
+<!--preloads idk it works better this way -->
+<link rel="preload" href="/fonts/zpix.woff" as="font" type="font/ttf" crossorigin fetchpriority="high" />
+<link rel="preload" href="/fonts/zpix.woff2" as="font" type="font/ttf" crossorigin fetchpriority="high" />
+<link rel="preload" href="/eep512.png" as="image" type="image/png" crossorigin fetchpriority="high" />
+<link rel="preload" href="/panic512.png" as="image" type="image/png" crossorigin fetchpriority="high" />
+<link rel="preload" href="/cry512.png" as="image" type="image/png" crossorigin fetchpriority="high" />
 
 <!-- canonical URL -->
 <link rel="canonical" href={canonicalURL} />
