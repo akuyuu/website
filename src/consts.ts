@@ -3,7 +3,7 @@
 
 export const SITE_TITLE = 'home';
 export const SITE_DESCRIPTION = 'a website of sorts';
-export const PREVIEW = '/preview.png'
-export const ACTIVE = '/eep512.png';
-export const INACTIVE = '/panic512.png';
-export const RECOVER = '/cry512.png';
+export const PREVIEW = '/icons/preview.png'
+export const ACTIVE = '/icons/eep512.png';
+export const INACTIVE = '/icons/panic512.png';
+export const RECOVER = '/icons/cry512.png';
