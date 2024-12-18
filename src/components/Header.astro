@@ -4,14 +4,14 @@ interface Props {
 	description: string;
 }
 
-const { pageTitle = SITE_TITLE, description} = Astro.props;
+const { pageTitle, description} = Astro.props;
 import { SITE_TITLE, ACTIVE, INACTIVE, RECOVER, PREVIEW } from '../consts';
 ---
 
 <head>
 	<title>{pageTitle}</title>
 	<link id="favicon" rel="icon" href={ACTIVE}>
-	<meta property="og:title" content={SITE_TITLE} />
+	<meta property="og:title" content={pageTitle} />
 	<meta property="og:description" content={description} />
 	<meta property="og:image" content={PREVIEW} />
 	<meta property="og:image:width" content=256 />
