@@ -15,12 +15,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <!--<link rel="icon" type="image/svg+xml" href="/favicon.svg" />-->
 <meta name="generator" content={Astro.generator} />
 
-<!--preloads idk it works better this way -->
+<!--preloads -->
+<link rel="preload" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAwElEQVRIicWVTQ6CMBBGvzIeBRdsTOo1Gjysph4D16YeRcBFMwErGCi081aEn/B4dFJVl03fYuD+OitsoNjy8BQHPrBOAwDMsekJwC3SNJ0hMzYF1jdNb8jENs1j2HbDyrw+T6CCFjfN1zBkaVMZwzVN5RqGzDWVMaSOvk+MNKzTwBswlW8q39BUj7/X8xj6deZNrNM/r5WdFDaLZXdDVZd+/TBhG963eTIY/pL0sxy7/84hNMsALsHfp+lb9zf8ACTxT/mDzpLPAAAAAElFTkSuQmCC" as="image">
 <link rel="preload" href="/fonts/zpix.woff" as="font" type="font/ttf" crossorigin fetchpriority="high" />
 <link rel="preload" href="/fonts/zpix.woff2" as="font" type="font/ttf" crossorigin fetchpriority="high" />
 <link rel="preload" href="/icons/eep512.png" as="image" type="image/png" crossorigin fetchpriority="high" />
 <link rel="preload" href="/icons/panic512.png" as="image" type="image/png" crossorigin fetchpriority="high" />
 <link rel="preload" href="/icons/cry512.png" as="image" type="image/png" crossorigin fetchpriority="high" />
+
 
 <!-- canonical URL -->
 <link rel="canonical" href={canonicalURL} />
