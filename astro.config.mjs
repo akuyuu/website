@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://amechan.rip',
-	base: 'website',
+	// base: 'website',
 	integrations: [mdx(), sitemap()],
 	vite: {
 		assetsInclude: ['**/*.ttf', '**/*.png'],
