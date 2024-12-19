@@ -13,7 +13,7 @@ importers:
         version: 0.9.4(typescript@5.6.3)
       '@astrojs/mdx':
         specifier: ^4.0.2
-        version: 4.0.2(astro@5.0.5(rollup@4.25.0)(typescript@5.6.3)(yaml@2.6.0))
+        version: 4.0.2(astro@5.0.8(rollup@4.25.0)(typescript@5.6.3)(yaml@2.6.0))
       '@astrojs/rss':
         specifier: ^4.0.10
         version: 4.0.10
@@ -21,8 +21,8 @@ importers:
         specifier: ^3.2.1
         version: 3.2.1
       astro:
-        specifier: ^5.0.5
-        version: 5.0.5(rollup@4.25.0)(typescript@5.6.3)(yaml@2.6.0)
+        specifier: ^5.0.8
+        version: 5.0.8(rollup@4.25.0)(typescript@5.6.3)(yaml@2.6.0)
       http-server:
         specifier: ^14.1.1
         version: 14.1.1
@@ -771,8 +771,8 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
-  astro@5.0.5:
-    resolution: {integrity: sha512-xfptdmurDsQcj/Anc7mU+eKlcyV7ppJIlmaSwhX3ZWwK5N/0rGKVmUqnuILgR6MB0XVJiIfublNzDGoyj4Q6BQ==}
+  astro@5.0.8:
+    resolution: {integrity: sha512-nW4TmRCeG3t2iDmm91KPvYpYNljNfjeaneN4BX463DKAZ3MPmUn92aKefOXC0bjMHQ2Gamc8MIZ6sORS2EhyAQ==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2201,12 +2201,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.0.2(astro@5.0.5(rollup@4.25.0)(typescript@5.6.3)(yaml@2.6.0))':
+  '@astrojs/mdx@4.0.2(astro@5.0.8(rollup@4.25.0)(typescript@5.6.3)(yaml@2.6.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.0.1
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       acorn: 8.14.0
-      astro: 5.0.5(rollup@4.25.0)(typescript@5.6.3)(yaml@2.6.0)
+      astro: 5.0.8(rollup@4.25.0)(typescript@5.6.3)(yaml@2.6.0)
       es-module-lexer: 1.5.4
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.3
@@ -2778,7 +2778,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@5.0.5(rollup@4.25.0)(typescript@5.6.3)(yaml@2.6.0):
+  astro@5.0.8(rollup@4.25.0)(typescript@5.6.3)(yaml@2.6.0):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.2
