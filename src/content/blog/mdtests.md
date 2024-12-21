@@ -12,6 +12,9 @@ _italic test_ **bold test** ~~through~~ , consectetur adipiscing elit. Nam et ma
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et magna laoreet, dignissim dui eu, consectetur turpis. Morbi eget arcu vitae dui lacinia molestie. Etiam et iaculis felis. Maecenas convallis sapien dapibus, vestibulum est et, tincidunt dui. Vestibulum gravida enim lobortis ex egestas pulvinar. Donec pellentesque justo quis tristique placerat.
 
+[href1](https://youtube.com)<br>
+[href2](https://github.com)
+
 ```go
 // taken from https://gobyexample.com/channels
 package main
