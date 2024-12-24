@@ -127,26 +127,9 @@ strong, b {
     font-weight: 700;
 }
 
-/*a {*/
-/*    color: var(--accent);*/
-/*}*/
-
 a {
-    color: #212939;
+    color: #4454fc;
     text-decoration: none;
-    animation: shine 4s infinite;
-}
-
-@keyframes shine {
-    0% {
-        color: #212939;
-    }
-    50% {
-        color: var(--accent);
-    }
-    100% {
-        color: #212939;
-    }
 }
 
 a:hover {
