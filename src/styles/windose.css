@@ -22,13 +22,13 @@ p {
     font-size: 0.95em;
 }
 
+.prose p, .prose ul, .prose a {
+    margin-bottom: 2.1em;
+}
+
 p, ul, pre {
     text-align: justify;
     margin-bottom: 1em;
-}
-
-.prose p, .prose ul, .prose a {
-    margin-bottom: 2.1em;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, pre, code {
@@ -49,7 +49,7 @@ h3 + p, h3 + ul,
 h4 + p, h4 + ul,
 h5 + p, h5 + ul,
 h6 + p, h6 + ul {
-    margin-top: -3px;
+    margin-top: -4px;
 
     box-shadow: 0 0 0 6px #dedbe0,
     12px 0 0 #3716c5,
@@ -88,10 +88,6 @@ h4[class='title'] {
     margin-bottom: -100px;
 }
 
-/*pre:has(+ pre){*/
-/*    margin-bottom: -1px;*/
-/*}*/
-
 p + p, p + ul,
 ul + p, ul + ul, ul + pre {
     margin-top: -28px
@@ -99,10 +95,6 @@ ul + p, ul + ul, ul + pre {
 
 p + pre {
     margin-top: -27px;
-}
-
-pre + p {
-    /*margin-top: -2px*/
 }
 
 ul {
@@ -118,9 +110,15 @@ pre > code {
     all: unset;
 }
 
+code:not(pre code) {
+    all: unset;
+    background: #bebdbf;
+    border-radius: 2px;
+    box-shadow: none;
+    padding: 1px 1px 1px 2px;
+}
+
 blockquote {
-    /*border-left: 4px solid var(--accent);*/
-    /*padding: 0 0 0 20px;*/
     margin: 0;
     font-size: 1.333em;
 }

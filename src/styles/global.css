@@ -128,7 +128,13 @@ strong, b {
 }
 
 a {
+    color: #4454fc;
+    text-decoration: none;
+}
+
+a:hover {
     color: var(--accent);
+    animation: none;
 }
 
 textarea {
