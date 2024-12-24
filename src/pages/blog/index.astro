@@ -19,6 +19,16 @@ const posts = (await getCollection('blog')).sort(
     main {
         width: 960px;
     }
+
+    a {
+        color: #212939;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: var(--accent);
+        animation: none;
+    }
 </style>
 
 <body>
