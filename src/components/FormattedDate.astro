@@ -1,17 +1,21 @@
 ---
 interface Props {
-	date: Date;
+  date: Date;
+  last?: boolean;
 }
 
-const { date } = Astro.props;
+const { date, last } = Astro.props;
 ---
 
-<time datetime={date.toISOString()}>
-	{
-		date.toLocaleDateString('en-us', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-		})
-	}
-</time>
+{date ? (
+  <time datetime={date.toISOString()}>
+    {last ? (<br>
+      <>&nbsp;last updated: </>
+    ) : null}
+    {date.toLocaleDateString('en-us', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    })}
+  </time>
+) : null}
