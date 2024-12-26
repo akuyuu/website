@@ -1,7 +1,7 @@
 ---  
 title: "Reflecting on Go's tags and reflect package"
 description: 'actually neat feature'  
-pubDate: 'Dec 28 2024'
+pubDate: 'Dec 26 2024'
 ---
 
 ## Intro
