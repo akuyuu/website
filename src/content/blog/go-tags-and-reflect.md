@@ -1,8 +1,9 @@
 ---  
 title: "Reflecting on Go's tags and reflect package"
 description: 'actually neat feature'  
-pubDate: 'Dec 28 2024'  
+pubDate: 'Dec 28 2024'
 ---
+
 ## Intro
 If you wrote code in the past in Go and had to work with jsons (or other filetypes for storing data) then you've probably seen code that looks something this:
 ```go

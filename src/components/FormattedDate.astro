@@ -1,6 +1,6 @@
 ---
 interface Props {
-  date: Date;
+  date: Date | undefined;
   last?: boolean;
 }
 
@@ -9,7 +9,7 @@ const { date, last } = Astro.props;
 
 {date ? (
   <time datetime={date.toISOString()}>
-    {last ? (<br>
+    {last === true ? (<br>
       <>&nbsp;last updated: </>
     ) : null}
     {date.toLocaleDateString('en-us', {
