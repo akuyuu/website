@@ -1,0 +1,48 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import {SITE_TITLE, SITE_DESCRIPTION} from '../../consts';
+import {getCollection} from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+
+const posts = (await getCollection('short')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang="en">
+<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+<Header pageTitle="/short" description={"short thoughts"}/>
+
+<style>
+    main {
+        width: 960px;
+    }
+
+    a {
+        color: #212939;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: var(--accent);
+        animation: none;
+    }
+</style>
+
+<body>
+<main>
+    <h1>blog!!</h1>
+    <p>
+        {
+            posts.map((post) => (
+                    <a href={`/short/${post.slug}/`}>>{post.data.title}</a>
+                    <br>
+                    <FormattedDate date={post.data.pubDate}/><FormattedDate date={post.data.updDate} last={true} /><br>
+            ))
+        }
+    </p>
+</main>
+</body>
+</html>
