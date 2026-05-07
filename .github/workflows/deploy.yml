@@ -10,33 +10,18 @@ permissions:
   pages: write
   id-token: write
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v5
-      - name: Setup Node.js
-        uses: actions/setup-node@v5
+      - name: Checkout repository using git
+        uses: actions/checkout@v4
+      - name: Install, build, and upload website
+        uses: withastro/action@v3
         with:
+          path: .
           node-version: 22
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v5
-        with:
-          version: latest
-      - name: Install dependencies
-        run: pnpm install --ignore-scripts=false
-      - name: Build site
-        run: pnpm run build
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: ./dist
+          package-manager: pnpm@latest
 
   deploy:
     needs: build
