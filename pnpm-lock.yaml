@@ -26,9 +26,6 @@ importers:
       http-server:
         specifier: ^14.1.1
         version: 14.1.1
-      prism:
-        specifier: link: @astro/prism
-        version: link: @astro/prism
       typescript:
         specifier: ^6.0.3
         version: 6.0.3

@@ -16,7 +16,6 @@
     "@astrojs/sitemap": "^3.7.2",
     "astro": "^6.3.1",
     "http-server": "^14.1.1",
-    "prism": "link: @astro/prism",
     "typescript": "^6.0.3",
     "vite": "^8.0.11"
   },
