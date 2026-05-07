@@ -1,1 +1,4 @@
+allowBuilds:
+  esbuild: set this to true or false
+  sharp: set this to true or false
 storeDir: ~/Library/pnpm/store/v3
