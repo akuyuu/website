@@ -28,9 +28,7 @@ jobs:
         with:
           version: latest
       - name: Install dependencies
-        run: pnpm install
-      - name: Approve build scripts
-        run: pnpm approve-builds --all
+        run: pnpm install --ignore-scripts=false
       - name: Build site
         run: pnpm run build
       - name: Setup Pages
