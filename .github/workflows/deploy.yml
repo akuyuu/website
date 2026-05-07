@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Approve build scripts
-        run: pnpm approve-builds
+        run: pnpm approve-builds --all
       - name: Build site
         run: pnpm run build
       - name: Setup Pages
