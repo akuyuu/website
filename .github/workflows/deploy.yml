@@ -10,18 +10,34 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository using git
-        uses: actions/checkout@v4
-      - name: Install, build, and upload website
-        uses: withastro/action@v3
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
         with:
-          path: .
+          version: latest
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
           node-version: 22
-          package-manager: pnpm@latest
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --config.dangerously-allow-all-builds=true
+      - name: Build site
+        run: pnpm run build
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./dist
 
   deploy:
     needs: build
