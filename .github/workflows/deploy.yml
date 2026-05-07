@@ -27,6 +27,8 @@ jobs:
         uses: pnpm/action-setup@v5
         with:
           version: latest
+      - name: Approve build scripts
+        run: pnpm approve-builds esbuild sharp
       - name: Install dependencies
         run: pnpm install --ignore-scripts=false
       - name: Build site
